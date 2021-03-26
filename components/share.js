@@ -1,7 +1,7 @@
 import React from 'react'
 
-const renderTeam = (team) => {
-    return <div className="team" key={team.name}>
+const renderTeam = (team, i) => {
+    return <div className="team" key={team.name + i}>
         {team.name}
         <ul>
             {team.members.map(member => <li>{member}</li>)}
