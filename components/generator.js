@@ -31,12 +31,13 @@ const Generator = () => {
             { 
                 teams.length > 1 &&
                 <Link
-                    className={styles.shareButton} 
                     href={{
                         pathname: '/share',
                         query: { teams: encodedTeams },
                     }}>
-                    share
+                    <div className={styles.shareButton} >
+                        share
+                    </div>
                 </Link>
             }
         </div>
