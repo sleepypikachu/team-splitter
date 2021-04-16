@@ -7,16 +7,20 @@
         display: flex;
         flex-direction: column;
         width: 50%;
-        padding: 2px;
+        padding: 5px;
     }
 
     background-color: lightgray;
+
+    
 }
 
 .participantsArea {
+
 }
 
 .teamsArea {
+    max-width: 200px;
 }
 
 .participantsList {
@@ -24,7 +28,12 @@
     padding-left: 0;
     background-color: white;
     margin-top: 0;
+<<<<<<< HEAD
     border-radius: 4px;
+=======
+    border-radius: 8px;
+    min-height: 300px;
+>>>>>>> separate-pages
     > li {
         display: flex;
         align-items: center;
@@ -43,10 +52,8 @@
         background-color: #EEEEEE;
     }
 
-    > li:last-child {
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-    }
+    overflow: hidden;
+    height: fit-content;
 }
 
 .addParticipant {
@@ -77,16 +84,31 @@
 }
 
 .shareButton {
-    > a {
-        font: bold 11px Arial;
-        text-decoration: none;
-        background-color: #EEEEEE;
-        color: green;
-        padding: 6px 12px 12px 12px;
-        border-top: 1px solid #CCCCCC;
-        border-right: 1px solid #333333;
-        border-bottom: 1px solid #333333;
-        border-left: 1px solid #CCCCCC;
-    }
-  }
+    font: bold 20px Arial;
+    text-decoration: none;   
+    background-color: green;
+    margin-top: 25px;
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+  
 
+.teamArea {
+    display: flex;
+    flex-direction: column;
+
+    height: 2em;
+}
+
+.teamInputs {
+    display: flex;
+    flex-direction: column;
+    input {
+        height: 2em;
+    }
+}
