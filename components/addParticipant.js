@@ -21,7 +21,7 @@ const AddParticipant = ({ addParticipant }) => {
   return (
     <div className={styles.addParticipant}>
       <input onKeyDown={handleEnterClick} ref={inputEl} placeholder="Participant Name" type="text"></input>
-      <button onClick={handleClick}>+</button>
+      <button className={styles.addParticipantButton} onClick={handleClick}>+</button>
     </div>
   );
 };
