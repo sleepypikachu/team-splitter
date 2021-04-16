@@ -52,8 +52,31 @@
     height: fit-content;
 }
 
-.addParticipant { 
+.addParticipant {
+    display: flex;
+    justify-content: space-between;
+    .addParticipantButton {
+        flex-grow: 1;
+    }
 
+    input {
+        flex-grow: 2;
+        padding: 10px 1rem;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; 
+    }
+
+    * {
+        border-radius: 4px;
+    }
+}
+
+.addParticipantButton { 
+    background-color: #0696cf;
+    margin-left: 5px;
+    font-size: 200%;
 }
 
 .shareButton {
