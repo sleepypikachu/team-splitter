@@ -56,8 +56,14 @@ const TeamsArea = ({ teams, setTeams, numOfParticipants }) => {
 
   return (
     <div className={styles.teamArea}>
-      <select value={selectedTeamCount} onChange={handleSelectChange}>{selectOptions}</select>
+      <div className={styles.numberOfTeams}>
+        <div>
+          Number of teams:
+        </div> 
+        <select value={selectedTeamCount} onChange={handleSelectChange}>{selectOptions}</select>
+      </div>
       <div className={styles.teamInputs}>
+        <div>Team Names</div>
         {teamInputs}
       </div>
     </div>
