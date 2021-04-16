@@ -3,8 +3,8 @@ import {useState} from 'react'
 import ParticipantsBox from './participantsBox'
 import AddParticipant from './addParticipant'
 import TeamsArea from './teamsArea'
-import Share from './share'
 import split from '../lib/splittingLogic'
+import Link from 'next/link'
 
 
 const Generator = () => {
@@ -18,12 +18,26 @@ const Generator = () => {
         )
     }
 
+    const splitTeams = split(teams, participants);
+
+    const encodedTeams = encodeURIComponent(JSON.stringify(splitTeams));
+
     return (
     <>
         <ParticipantsBox participants={participants} removeParticipant={removeParticipant}/>
         <AddParticipant addParticipant={addParticipant}/>
         <TeamsArea teams={teams} setTeams={setTeams} numOfParticipants={participants.length}/>
-        <Share teams={split(teams, participants)}/>
+        { 
+            teams.length > 1 &&
+            <Link
+                className="button" 
+                href={{
+                    pathname: '/share',
+                    query: { teams: encodedTeams },
+                }}>
+                share
+            </Link>
+        }
     </>
     )}
 
