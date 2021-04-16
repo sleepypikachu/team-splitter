@@ -17,6 +17,9 @@ const TeamsArea = ({ teams, setTeams, numOfParticipants }) => {
       if (numOfParticipants >= 2 && selectedTeamCount < 2) {
         setSelectedTeamCount(numOfParticipants);
       }
+      if (numOfParticipants < 2) {
+        setTeams([]);
+      }
     }
   }, [selectedTeamCount, numOfParticipants]);
 
