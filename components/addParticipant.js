@@ -1,5 +1,6 @@
 import React from "react";
-import {useRef} from 'react'
+import {useRef} from 'react';
+import styles from '../styles/Generator.module.scss';
 
 const AddParticipant = ({ addParticipant }) => {
     const inputEl = useRef(null);
@@ -18,10 +19,10 @@ const AddParticipant = ({ addParticipant }) => {
     };
 
   return (
-    <>
+    <div className={styles.addParticipant}>
       <input onKeyDown={handleEnterClick} ref={inputEl} placeholder="Participant Name" type="text"></input>
-      <button onClick={handleClick}>+</button>
-    </>
+      <button className={styles.addParticipantButton} onClick={handleClick}>+</button>
+    </div>
   );
 };
 

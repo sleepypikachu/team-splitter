@@ -1,5 +1,6 @@
 import React from 'react';
 import ParticipantRow from './participantRow';
+import styles from '../styles/Generator.module.scss';
 
 const ParticipantsBox = ({participants, removeParticipant}) => {
 
@@ -11,7 +12,7 @@ const ParticipantsBox = ({participants, removeParticipant}) => {
     });
 
     return (
-        <ul>
+        <ul className={styles.participantsList}>
             {participantElements}
         </ul>
     )

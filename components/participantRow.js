@@ -7,10 +7,10 @@ const ParticipantRow = ({participant, removeParticipant}) => {
     }
 
     return (
-        <>
-            <li>{participant}</li> 
-            <button onClick={handleClick}>-</button> 
-        </>
+        <li>
+            {participant}
+            <div onClick={handleClick}>-</div> 
+        </li> 
     )
     
 }

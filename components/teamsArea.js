@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import styles from '../styles/Generator.module.scss';
 
 const TeamsArea = ({ teams, setTeams, numOfParticipants }) => {
   const [selectedTeamCount, setSelectedTeamCount] = useState(0);
@@ -54,10 +55,18 @@ const TeamsArea = ({ teams, setTeams, numOfParticipants }) => {
   }
 
   return (
-    <>
-      <select value={selectedTeamCount} onChange={handleSelectChange}>{selectOptions}</select>
-      {teamInputs}
-    </>
+    <div className={styles.teamArea}>
+      <div className={styles.numberOfTeams}>
+        <div>
+          Number of teams:
+        </div> 
+        <select value={selectedTeamCount} onChange={handleSelectChange}>{selectOptions}</select>
+      </div>
+      <div className={styles.teamInputs}>
+        <div>Team Names</div>
+        {teamInputs}
+      </div>
+    </div>
   );
 };
 

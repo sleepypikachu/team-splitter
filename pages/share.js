@@ -5,7 +5,6 @@ export default function SharePage({teams}) {
 }
 
 export async function getServerSideProps(context) {
-    console.log(context)
     const teamQueryParam = context.query.teams;
 
     if (!teamQueryParam) {
